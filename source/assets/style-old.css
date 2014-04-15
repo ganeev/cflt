@@ -1,0 +1,16 @@
+.header, .content, .footer {position: absolute; width: 100%;}
+.header {height:100px; top: 0;}
+.content {top: 100px; bottom: 50px; background-color: seashell;}
+.footer {height: 50px; bottom: 0;}
+.clear {clear: both;}
+
+.header-wrapper {position: relative; right: 100px; left: 0;}
+.header-underline {border-top: 1px solid black; margin-right: 100px;}
+.header-name { float: left; padding-top:30px; font-size: 30px; line-height: 50px;}
+.header-info-panel {position: absolute; right: 100px; height: 80px; width: 200px; background-color: #FFF383;}
+.header-button {position: absolute; right: 0; background-color: #FFF383; border-radius: 5px; padding: 10px;}
+
+.footer-underline {border-top: 1px solid black; margin-right: 100px; margin-left: 200px;}
+
+.left-col {height: 100%; width: 200px; float: left; background-color: wheat;}
+.right-col {height: 100%; margin-left: 200px; background-color:whitesmoke;}
