@@ -7,7 +7,8 @@
     var scripts = [
         "source/models/users.js",
         "source/views/main.js",
-        "source/views/start_page/start_page.js"
+        "source/views/dashboard_page/dashboard_page.js",
+        "source/views/statistic/clients_page/clients_page.js"
     ];
 
     function onEndLoad() {
