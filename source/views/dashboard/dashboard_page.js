@@ -2,10 +2,9 @@ RAD.view("view.dashboard_page", RAD.Blanks.View.extend({
     url: 'source/views/dashboard/dashboard_page.html',
     onStartAttach: function(){
         $('#content').css('overflow', 'visible');
-        $('#sidebar').hide();
+        $('#sidebar .menu').hide();
     },
-    onEndDetach: function(){
+    onEndAttach: function(){
         $('#content').css('overflow', 'hidden');
-        $('#sidebar').show();
     }
 }));

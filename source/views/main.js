@@ -19,7 +19,13 @@ RAD.view("view.main", RAD.Blanks.View.extend({
         this.subscribe('router.back', this.onRouterBackEvent, this);
 
         this.loader.done(function () {
-            self.navToDashboard();
+            var options = {
+                container_id: '#content',
+                content: 'view.dashboard_page',
+                backstack: true,
+                animation: 'fade'
+            };
+            self.publish('navigation.show', options);
         });
     },
 
@@ -36,8 +42,9 @@ RAD.view("view.main", RAD.Blanks.View.extend({
 
     },
     selectMenuItem: function(elem){
-        var menu = this.$('.menu li').removeClass('active');
-        elem && elem.addClass('active');
+        var menu = this.$('.menu');
+        menu.find('li').removeClass('active');
+        elem && elem.addClass('active') && menu.fadeIn();
     },
     navTo: function(name){
         var options = {

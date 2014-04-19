@@ -7,17 +7,26 @@
     var scripts = [
         "source/models/users.js",
         "source/views/main.js",
-        "source/views/dashboard_page/dashboard_page.js",
-        "source/views/statistic/clients_page/clients_page.js"
+        "source/views/dashboard/dashboard_page.js",
+        "source/views/statistic/clients/clients_page.js",
+        "source/views/news/news_page.js",
+        "source/views/sales/sales_page.js",
+        "source/views/presents/presents_page.js",
+        "source/views/message/message_page.js",
+        "source/views/settings/settings_page.js"
+
     ];
 
     function onEndLoad() {
+
         RAD.core.publish('navigation.show', {
             container_id: '#screen',
             content: "view.main",
-            animation: 'none'
+            animation: 'fade'
         });
     }
 
     window.RAD.scriptLoader.loadScripts(scripts, onEndLoad);
 }(document, window));
+
+
