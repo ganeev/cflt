@@ -46,6 +46,32 @@ body{
 a{
 	text-decoration: none;
 }
+.button{
+	display: inline-block;
+	vertical-align: top;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 12px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.orange{
+	background: #f17e00;
+	color: #fff;
+}
+.blue{
+	background: #251e63;
+	color: #fff;
+}
+.light-green{
+	background: #00a658;
+	color: #fff;
+}
+.balance.yellow,
+.yellow{
+	background: #f6dc83;
+	color: #fff;
+}
 #header{
 	position: relative;
 	padding: 0 78px 0 25px;
@@ -135,7 +161,7 @@ a{
 .date{
 	position: absolute;
 	bottom: 0;
-	left: 0;
+	left: 20px;
 	text-transform: uppercase;
 	font-size: 34px;
 	font-family: futura;
@@ -168,6 +194,7 @@ a{
 }
 .menu li.active,
 .menu li:hover{
+	margin: 0 0 3px 10px;
 	-webkit-transition:all 0.5s;
 	-moz-transition:all 0.5s;
 	-ms-transition:all 0.5s;
@@ -185,32 +212,32 @@ a{
 	padding:10px 20px;
 	position: relative;
 }
-.menu a.stat{
+.menu li.stat > a{
 	background:#e31e24 url(images/stat.png) no-repeat 15px 50%;
 	-webkit-background-size: 100px auto;
 	background-size: 100px auto;
 }
-.menu a.news{
+.menu li.news > a{
 	background:#ef7f1a url(images/news.png) no-repeat 30px 50%;
 	-webkit-background-size: 50px auto;
 	background-size: 50px auto;
 }
-.menu a.sales{
+.menu li.sales > a{
 	background:#b0cb1f url(images/sales.png) no-repeat 20px 50%;
 	-webkit-background-size: 75px auto;
 	background-size: 75px auto;
 }
-.menu a.presents{
+.menu li.presents > a{
 	background:#009846 url(images/presents.png) no-repeat 25px 50%;
 	-webkit-background-size: 80px auto;
 	background-size: 80px auto;
 }
-.menu a.message{
+.menu li.message > a{
 	background:#302c5e url(images/message.png) no-repeat 30px 50%;
 	-webkit-background-size: 70px auto;
 	background-size: 70px auto;
 }
-.menu a.settings{
+.menu li.settings > a{
 	background:#e51170 url(images/settings.png) no-repeat 20px 50%;
 	-webkit-background-size: 80px auto;
 	background-size: 80px auto;
@@ -221,6 +248,7 @@ a{
 	top: 0;
 	bottom: 0;
 	left: 349px;
+    overflow: hidden;
 }
 .no-aside #content{
 	right: 30px;
@@ -273,6 +301,7 @@ a{
 	border-collapse: collapse;
 	border: none;
 	width: 100%;
+	margin: 0 0 10px;
 	font-family: intro_regular;
 	color: #000;
 }
@@ -299,6 +328,177 @@ a{
 }
 .content-table td:first-child{
 	border-left: none;
+}
+.filter-form{
+	margin: 0 0 10px;
+}
+.filter-form legend{
+	font-size: 30px;
+	font-family: intro_regular;
+	text-transform: uppercase;
+	color: #5b5a50;
+	display: block;
+	margin: 0 0 15px;
+}
+.filter-form .holder{
+	border-radius: 10px;
+	border: 5px solid #b2b3b3;
+	padding: 20px 10px;
+	overflow: hidden;
+}
+.filter-form .col{
+	float: left;
+	width: 20%;
+}
+.filter-form strong{
+	display: block;
+	margin: 0 0 10px;
+	text-align: center;
+	font-family: intro_regular;
+}
+.filter-form .input-holder{
+	text-align: center;
+}
+.filter-form .input-holder .col{
+	width: 48%;
+	padding: 0 5px;
+}
+.filter-form .input-holder input[type="text"]{
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	border-radius: 5px;
+	border: 1px solid #b4b5b5;
+	width: 100%;
+	padding:5px;
+	height: 26px;
+}
+.filter-form .input-holder input[type="text"]:focus{
+	background: #b0cb1f;
+}
+.filter-form .input-holder label{
+	display: block;
+	text-align: center;
+	font-family: intro_regular;
+}
+.filter-form .row{
+	margin: 26px 0 0;
+	text-align: center;
+}
+.filter-form .row div{
+	display: inline-block;
+	vertical-align: top;
+}
+.filter-form .row label{
+	width: 90px;
+	border-radius: 5px;
+	border: 1px solid #b4b5b5;
+	margin: 0 3px;
+	display: inline-block;
+	vertical-align: top;
+	padding:5px;
+	position: relative;
+	overflow: hidden;
+	font-family: intro_regular;
+}
+.filter-form .row input[type="radio"]{
+	position: absolute;
+	top: -999px;
+	left: -999px;
+}
+.filter-form .row input[type="radio"]:checked + label{
+	background: #b0cb1f;
+}
+.news-list{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.news-list li{
+	padding: 16px 0;
+	overflow: hidden;
+	border-bottom: 1px solid #cacaca;
+}
+.news-list .button{
+	float: right;
+	width: 150px;
+}
+.news-list dl{
+	display: block;
+	margin: 0;
+}
+.news-list dl dt{
+	display: inline-block;
+	vertical-align: middle;
+	width: 130px;
+	margin: 0 5px 0 0;
+}
+.news-list dl dd{
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 5px;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: center;
+	font-family: futura;
+	width: 30px;
+	height: 30px;
+}
+.post-block{
+	overflow: hidden;
+}
+.post-block .post{
+	float: left;
+	padding: 10px 10px 10px 0;
+	width: 50%;
+	border: 1px solid #ccc;
+	border-width: 0 0 1px 1px;
+}
+.post-block .post > img{
+	float: left;
+	width: 70px;
+	height: 150px;
+	margin: 0 20px 0 0;
+}
+.post-block .post .holder{
+	overflow: hidden;
+	position: relative;
+	min-height: 90px;
+	padding: 30px 0;
+	vertical-align: middle;
+	text-align: center;
+}
+.post-block .post .holder:before{
+	width: 1px;
+	min-height: 90px;
+	margin: 0 0 0 -5px;
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+	content: '';
+}
+.post-block .post strong{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	left: 0;
+}
+.post-block .post p{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+}
+.post-block .post .btn-holder{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 0 10px;
+}
+.post-block .post .button{
+	width: 100px;
+	margin: 0 5px;
 }
 #footer{
 	position: absolute;
