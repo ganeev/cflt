@@ -11,12 +11,15 @@ RAD.view("view.clients_page", RAD.Blanks.ScrollableView.extend({
     },
     updateUsers: function(){
         var self = this;
+        this.model.inRequest = true;
         this.model.fetch({
             silent: true,
             success: function(){
-                self.render();
+                self.model.inRequest = false;
+                self.template && self.render();
             }
         });
+        console.info(this.model);
     },
     formatDate: function(numeric){
         var date = new Date(numeric);

@@ -1,29 +1,32 @@
 <div class="scroll-view" style="overflow: hidden;bottom: 230px;position: absolute;top: 0; width: 100%;" >
-<table class="content-table">
-    <tr>
-        <th><span>id</span></th>
-        <th><span>фио</span></th>
-        <th><span>дата рождения</span></th>
-        <th><span>бонусы</span></th>
-        <th><span>сумма по счетам</span></th>
-        <th><span>дата регистрации</span></th>
-        <th><span>дата последнего посещения</span></th>
-    </tr>
-    {{# var self = this; }}
-    {{# _(model).each(function(item, index){ }}
-    <tr>
-        <td>{{ +index + 1 }}</td>
-        <td>{{ item.name }}</td>
-        <td>{{ self.formatDate(item.dob) }}</td>
-        <td>{{ item.bonus }}</td>
-        <td>{{ item.spent }}</td>
-        <td>{{ self.formatDate(item.regdate) }}</td>
-        <td>{{ self.formatDate(item.lv) }}</td>
-    </tr>
+    {{# if (this.model.inRequest){ }}
+    <div class="loader"></div>
+    {{# }else{ }}
+    <table class="content-table">
+        <tr>
+            <th><span>id</span></th>
+            <th><span>фио</span></th>
+            <th><span>дата рождения</span></th>
+            <th><span>бонусы</span></th>
+            <th><span>сумма по счетам</span></th>
+            <th><span>дата регистрации</span></th>
+            <th><span>дата последнего посещения</span></th>
+        </tr>
+        {{# var self = this; }}
 
-    {{# }) }}
-
-</table>
+        {{# _(model).each(function(item, index){ }}
+        <tr>
+            <td>{{ +index + 1 }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ self.formatDate(item.dob) }}</td>
+            <td>{{ item.bonus }}</td>
+            <td>{{ item.spent }}</td>
+            <td>{{ self.formatDate(item.regdate) }}</td>
+            <td>{{ self.formatDate(item.lv) }}</td>
+        </tr>
+        {{# }) }}
+    </table>
+    {{# } }}
 </div>
 
 <form action="#" class="filter-form" style="position: absolute; bottom: 0; height: 205px;">

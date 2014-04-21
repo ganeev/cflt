@@ -14,37 +14,21 @@
         </dl>
     </li>
 </ul>
-<div class="post-block">
-    <div class="post">
-        <img src="" alt="" />
-        <div class="holder">
-            <strong>fasdsdf</strong>
-            <p>fasdfasdfa</p>
-            <div class="btn-holder"><a href="#" class="button light-green">подробнее</a><a href="#" class="button orange">удалить</a></div>
+<div class="scroll-view" style="overflow: hidden;bottom: 0;position: absolute;top: 125px; width: 100%;">
+    {{# if (this.model.inRequest){ }}
+    <div class="loader"></div>
+    {{# }else{ }}
+    <div class="post-block">
+        {{# _(model).each(function(item, index){ }}
+        <div class="post">
+            <img {{ ('src=' + item.img + '') }} alt="" />
+            <div class="holder">
+                <strong>{{ item.title }}</strong>
+                <p>{{ item.text }}</p>
+                <div class="btn-holder"><a href="#" class="button light-green">подробнее</a><a href="#" class="button orange">удалить</a></div>
+            </div>
         </div>
+        {{# }) }}
     </div>
-    <div class="post">
-        <img src="" alt="" />
-        <div class="holder">
-            <strong></strong>
-            <p></p>
-            <div class="btn-holder"><a href="#" class="button light-green">подробнее</a><a href="#" class="button orange">удалить</a></div>
-        </div>
-    </div>
-    <div class="post">
-        <img src="" alt="" />
-        <div class="holder">
-            <strong></strong>
-            <p></p>
-            <div class="btn-holder"><a href="#" class="button light-green">подробнее</a><a href="#" class="button orange">удалить</a></div>
-        </div>
-    </div>
-    <div class="post">
-        <img src="" alt="" />
-        <div class="holder">
-            <strong></strong>
-            <p></p>
-            <div class="btn-holder"><a href="#" class="button light-green">подробнее</a><a href="#" class="button orange">удалить</a></div>
-        </div>
-    </div>
+    {{# } }}
 </div>
