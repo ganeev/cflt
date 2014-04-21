@@ -1,4 +1,4 @@
-<div class="scroll-view" style="overflow: hidden;bottom: 205px;position: absolute;top: 0; width: 100%;">
+<div class="scroll-view" style="overflow: hidden;bottom: 230px;position: absolute;top: 0; width: 100%;" >
 <table class="content-table">
     <tr>
         <th><span>id</span></th>
@@ -12,7 +12,7 @@
     {{# var self = this; }}
     {{# _(model).each(function(item, index){ }}
     <tr>
-        <td>{{ index }}</td>
+        <td>{{ +index + 1 }}</td>
         <td>{{ item.name }}</td>
         <td>{{ self.formatDate(item.dob) }}</td>
         <td>{{ item.bonus }}</td>

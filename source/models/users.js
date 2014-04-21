@@ -17,6 +17,12 @@ RAD.model('clients', Backbone.Collection.extend({
             {name: 'sergey'},
             {name: 'vasiliy'}
         ])*/
+    },
+    toJSON: function(){
+        return _(Backbone.Collection.prototype.toJSON.apply(this)).filter(this.filter);
+    },
+    filter: function(item){
+        return true;
     }
 
 }));

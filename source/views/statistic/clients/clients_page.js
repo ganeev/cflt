@@ -1,15 +1,22 @@
 RAD.view("view.clients_page", RAD.Blanks.ScrollableView.extend({
     url: 'source/views/statistic/clients/clients_page.html',
-
+    className: 'override-scroll position-relative',
     onInitialize: function(){
         this.model = RAD.model('clients');
         this.updateUsers();
     },
-    onEndAttach: function(){
-       //this.model.fetch();
+    onEndRender: function(){
+        this.detachScroll();
+        this.attachScroll();
     },
     updateUsers: function(){
-        this.model.fetch();
+        var self = this;
+        this.model.fetch({
+            silent: true,
+            success: function(){
+                self.render();
+            }
+        });
     },
     formatDate: function(numeric){
         var date = new Date(numeric);
