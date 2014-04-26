@@ -1,11 +1,11 @@
-RAD.view("view.news_page", RAD.Blanks.ScrollableView.extend({
-    url: 'source/views/news/news_page.html',
-    model: RAD.model('users'),
+RAD.view("view.stat_page", RAD.Blanks.ScrollableView.extend({
+    url: 'source/views/statistic/stat_page.html',
+    className: 'override-scroll position-relative',
     events: {
-        'click .orange': 'addNew'
+        'click .orange': 'goToClietns'
     },
     onInitialize: function(){
-        this.model = RAD.model('news');
+        this.model = RAD.model('clients');
         this.updateUsers();
     },
     onEndRender: function(){
@@ -24,12 +24,8 @@ RAD.view("view.news_page", RAD.Blanks.ScrollableView.extend({
         });
         console.info(this.model);
     },
-    addNew: function(){
-        var options = {
-            container_id: '#overlay',
-            content: 'view.add_new'
-        }
-        this.publish('navigation.dialog.show', options);
+    goToClietns: function(){
+        this.publish('view.main.clients');
     },
     formatDate: function(numeric){
         var date = new Date(numeric);

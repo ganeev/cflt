@@ -4,7 +4,7 @@
 RAD.view("view.main", RAD.Blanks.View.extend({
     url: 'source/views/main.html',
     events: {
-        'click .stat': 'navToClientsPage',
+        'click .stat': 'navToStatPage',
         'click .news': 'navToNewsPage',
         'click .sales': 'navToSalesPage',
         'click .presents': 'navToPresentsPage',
@@ -58,6 +58,10 @@ RAD.view("view.main", RAD.Blanks.View.extend({
     navToDashboard: function(){
         this.selectMenuItem();
         this.navTo('dashboard');
+    },
+    navToStatPage: function(){
+        this.selectMenuItem(this.$('.menu li.stat'));
+        this.navTo('stat');
     },
     navToClientsPage: function(){
         this.selectMenuItem(this.$('.menu li.stat'));
