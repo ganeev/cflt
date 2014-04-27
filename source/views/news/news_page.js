@@ -2,7 +2,7 @@ RAD.view("view.news_page", RAD.Blanks.ScrollableView.extend({
     url: 'source/views/news/news_page.html',
     model: RAD.model('users'),
     events: {
-        'click .orange': 'addNew'
+        'click .add-new-button': 'addNew'
     },
     onInitialize: function(){
         this.model = RAD.model('news');

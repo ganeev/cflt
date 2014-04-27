@@ -12,6 +12,7 @@
         "source/views/statistic/clients/clients_page.js",
         "source/views/news/news_page.js",
         "source/views/news/add_new/add_new.js",
+        'source/views/news/add_new/phone_preview/phone_preview.js',
         "source/views/sales/sales_page.js",
         "source/views/presents/presents_page.js",
         "source/views/message/message_page.js",

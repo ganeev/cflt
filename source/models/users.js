@@ -58,5 +58,7 @@ RAD.model('news', Backbone.Collection.extend({
     filter: function(item){
         return true;
     }
-
+}));
+RAD.model('add_new', Backbone.Model.extend({
+    url: 'api/news'
 }));

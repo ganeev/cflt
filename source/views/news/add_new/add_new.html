@@ -1,24 +1,23 @@
 <div class="lightbox-frame dialog popup-content big">
-    <div class="iphone">
-        <div class="block"></div>
-    </div>
+    <div class="iphone"></div>
     <div class="holder">
         <a href="#" class="close">X</a>
         <form action="#" class="event-form">
             <fieldset>
-                <legend>добавление собития</legend>
+                <legend>добавление события</legend>
                 <div class="holder">
                     <div class="img-holder">
                         <label>изображение</label>
-                        <div class="img-block"></div>
-                        <button class="add-image">загрузить изображение</button>
+                        <div class="img-block"><img id="previewImg" src="" style="width: 100%;"></div>
+                        <input type="file" id="imageInput" style="display: none;"><br>
+                        <div onclick="document.getElementById('imageInput').click();" class="add-image button">загрузить изображение</div>
                     </div>
                     <div class="fields">
-                        <label for="tetx1">дата события</label>
-                        <input type="text" id="tetx1">
-                        <label for="tetx2">название события</label>
-                        <input type="text" id="tetx2">
-                        <label for="textfield1">текс сообщения</label>
+                        <label for="text1">дата события</label>
+                        <input type="text" id="text1">
+                        <label for="text2">название события</label>
+                        <input type="text" id="text2">
+                        <label for="textfield1">текст сообщения</label>
                         <textarea id="textfield1"></textarea>
                         <div class="row">
                             <ul class="color-list">
@@ -45,7 +44,7 @@
                         </div>
                     </div>
                 </div>
-                <button>добавить событие</button>
+                <div id="addNew" class="button">добавить событие</div>
             </fieldset>
         </form>
     </div>

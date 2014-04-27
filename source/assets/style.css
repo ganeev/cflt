@@ -6,6 +6,9 @@ body,htmheight:100%;overflow:hidden;-ms-touch-action:none;-ms-touch-select:none}
     width: 100%;
     height: 100%;
 }
+.position-relative {
+    position: relative !important;
+}
 
 @font-face {
     font-family: 'futura';
@@ -62,6 +65,7 @@ a{
 	font-size: 12px;
 	text-align: center;
 	text-transform: uppercase;
+    cursor: pointer;
 }
 .red{
 	background: #dd2a1b;
@@ -805,14 +809,14 @@ ul.check-list input[type="checkbox"]:checked + label:before{
 	border-radius: 5px;
 	border: 1px solid #000;
 }
-.event-form button,
-.push-form button{
+.event-form .button,
+.push-form .button{
 	font-family: roomlight;
 	text-transform: uppercase;
 	text-align: center;
 	border: none;
 	background: #039846;
-	padding: 0;
+	/*padding: 0;*/
 	display: block;
 	width: 230px;
 	margin: 0 auto;
@@ -821,7 +825,7 @@ ul.check-list input[type="checkbox"]:checked + label:before{
 	height: 30px;
 	border-radius: 5px;
 }
-.event-form button{float: right;}
+.event-form .button{float: right;}
 .event-form fieldset > .holder{
 	overflow: hidden;
 	margin: 0 0 20px;
@@ -836,7 +840,7 @@ ul.check-list input[type="checkbox"]:checked + label:before{
 	border: 1px solid #b1c451;
 	margin: 0 0 10px;
 }
-.event-form .img-holder button{
+.event-form .img-holder .button{
 	float: none;
 	text-align: center;
 	display: block;

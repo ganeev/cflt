@@ -1,6 +1,6 @@
 <ul class="news-list">
     <li>
-        <a href="#" class="button orange">Добавить собитые</a>
+        <a href="#" class="button orange add-new-button">Добавить событие</a>
         <dl>
             <dt>осталось событий</dt>
             <dd class="orange">4</dd>
@@ -21,7 +21,7 @@
     <div class="post-block">
         {{# _(model).each(function(item, index){ }}
         <div class="post">
-            <img {{ ('src=' + item.img + '') }} alt="" />
+            <img {{ ('src=' + (item.img || '') + '') }} alt="" />
             <div class="holder">
                 <strong>{{ item.title }}</strong>
                 <p>{{ item.text }}</p>
